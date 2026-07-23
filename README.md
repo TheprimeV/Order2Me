@@ -1,20 +1,19 @@
-order2me/
+# Order2Me
 
-├── index.html
-├── student.html
-├── owner.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   ├── app.js
-│   ├── student.js
-│   ├── owner.js
-│   └── supabase.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
-│
-└── README.md
+University Canteen Ordering System
+
+## Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Supabase
+
+
+## Current Progress
+
+Day 2:
+- Project Setup Completed
+- Database Connected
+- Menu Fetch Completed
