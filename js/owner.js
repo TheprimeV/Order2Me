@@ -169,13 +169,11 @@ async function handleAddFood() {
         const isAvailable = document.getElementById("item-available").checked;
 
         if (!name) {
-            alert("❌ Please enter food name");
             console.warn("Food name is empty");
             return;
         }
 
         if (isNaN(price) || price < 0) {
-            alert("❌ Please enter valid price");
             console.warn("Invalid price:", price);
             return;
         }
@@ -194,12 +192,10 @@ async function handleAddFood() {
 
         if (error) {
             console.error("❌ Supabase error:", error);
-            alert(`❌ Error: ${error.message}`);
             return;
         }
 
         console.log("✅ Food added successfully:", data);
-        alert("✅ Food added successfully!");
         
         // Reset form and close modal
         document.getElementById("menu-form").reset();
@@ -209,7 +205,6 @@ async function handleAddFood() {
         loadMenuItems();
     } catch (err) {
         console.error("❌ Exception:", err);
-        alert(`❌ Exception: ${err.message}`);
     }
 }
 
@@ -238,19 +233,16 @@ async function handleEditFood() {
         const isAvailable = document.getElementById("edit-item-available").checked;
 
         if (!itemId) {
-            alert("❌ Item ID not found");
             console.error("No item ID");
             return;
         }
 
         if (!name) {
-            alert("❌ Please enter food name");
             console.warn("Food name is empty");
             return;
         }
 
         if (isNaN(price) || price < 0) {
-            alert("❌ Please enter valid price");
             console.warn("Invalid price:", price);
             return;
         }
@@ -270,18 +262,15 @@ async function handleEditFood() {
 
         if (error) {
             console.error("❌ Supabase error:", error);
-            alert(`❌ Error: ${error.message}`);
             return;
         }
 
         console.log("✅ Food updated successfully:", data);
-        alert("✅ Food updated successfully!");
         
         editFoodModal.hide();
         loadMenuItems();
     } catch (err) {
         console.error("❌ Exception:", err);
-        alert(`❌ Exception: ${err.message}`);
     }
 }
 
@@ -301,7 +290,6 @@ async function toggleAvailability(event) {
 
         if (error) {
             console.error("❌ Supabase error:", error);
-            alert(`❌ Error: ${error.message}`);
             event.target.checked = !isAvailable; // Revert
             return;
         }
@@ -309,7 +297,6 @@ async function toggleAvailability(event) {
         console.log("✅ Availability toggled successfully:", data);
     } catch (err) {
         console.error("❌ Exception:", err);
-        alert(`❌ Exception: ${err.message}`);
         event.target.checked = !isAvailable; // Revert
     }
 }
@@ -331,16 +318,13 @@ async function deleteItem(id) {
 
         if (error) {
             console.error("❌ Supabase error:", error);
-            alert(`❌ Error: ${error.message}`);
             return;
         }
 
         console.log("✅ Food deleted successfully");
-        alert("✅ Food deleted successfully!");
         loadMenuItems();
     } catch (err) {
         console.error("❌ Exception:", err);
-        alert(`❌ Exception: ${err.message}`);
     }
 }
 
