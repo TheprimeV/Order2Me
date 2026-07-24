@@ -5,8 +5,83 @@ body{
 .card{
     border:none;
     border-radius:12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
 }
 
 .btn{
     border-radius:8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Management Styles */
+.table {
+    font-size: 0.95rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+#menu-form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#menu-container {
+    min-height: 300px;
+}
+
+/* Badge Styles */
+.badge {
+    padding: 6px 12px;
+    font-weight: 500;
+}
+
+/* Form Control Styles */
+.form-control:focus,
+.form-check-input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Card Title Styles */
+.card-title {
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+/* Button Styles */
+.btn-sm {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
 }
